@@ -9,13 +9,13 @@
 
 ## Build
 
-Dependency,
+### Dependency
 
 ```shell
 sudo apt install -y build-essential xorg-dev
 ```
 
-Debug,
+### Debug
 
 The error,
 
@@ -42,13 +42,15 @@ vi /the/path/to/ns-allinone-2.35/ns-2.35/linkstate/ls.h
   void eraseAll() { this->erase(baseMap::begin(), baseMap::end()); }
 ```
 
-"Install",
+### "Install"
 
 ```shell
 tar -xf ns-allinone-2.35.tar.gz
 cd /the/path/to/ns-allinone-2.35/
 ./install
 ```
+
+### Environment variables
 
 Set ```PATH```,
 
@@ -58,7 +60,7 @@ LD_LIBRARY_PATH=/the/path/to/ns-allinone-2.35/otcl-1.14:/the/path/to/ns-allinone
 TCL_LIBRARY=/the/path/to/ns-allinone-2.35/tcl8.5.10/library
 ```
 
-"Validate",
+### "Validate"
 
 ```shell
 sudo apt install -y libperl4-corelib-perl
