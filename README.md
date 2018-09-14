@@ -11,8 +11,22 @@
 
 ### Dependency
 
+```xorg-dev``` for ns2,
+
 ```shell
-sudo apt install -y build-essential xorg-dev
+sudo apt install -y xorg-dev
+```
+
+Maker and compiler,
+
+```shell
+sudo apt install -y build-essential
+```
+
+Install `g++-5` if you are using Ubuntu 17.10+,
+
+```shell
+sudo apt install -y g++-5
 ```
 
 ### Debug
@@ -47,7 +61,7 @@ vi /the/path/to/ns-allinone-2.35/ns-2.35/linkstate/ls.h
 ```shell
 tar -xf ns-allinone-2.35.tar.gz
 cd /the/path/to/ns-allinone-2.35/
-./install
+export CC=gcc-5 CXX=g++-5 && ./install
 ```
 
 ### Environment variables
