@@ -9,6 +9,8 @@
 
 ## Build
 
+*Only tested on Ubuntu 18.04.1.*
+
 ### Dependency
 
 ```xorg-dev``` for ns2,
