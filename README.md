@@ -15,6 +15,33 @@ Dependency,
 sudo apt install -y build-essential xorg-dev
 ```
 
+Debug,
+
+The error,
+
+```
+In file included from linkstate/ls.cc:67:0:
+linkstate/ls.h: In instantiation of ‘void LsMap<Key, T>::eraseAll() [with Key = int; T = LsIdSeq]’:
+linkstate/ls.cc:396:28:   required from here
+linkstate/ls.h:137:25: error: ‘erase’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+  void eraseAll() { erase(baseMap::begin(), baseMap::end()); }
+                    ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+linkstate/ls.h:137:25: note: declarations in dependent base ‘std::map<int, LsIdSeq, std::less<int>, std::allocator<std::pair<const int, LsIdSeq> > >’ are not found by unqualified lookup
+linkstate/ls.h:137:25: note: use ‘this->erase’ instead
+```
+
+```shell
+vi /the/path/to/ns-allinone-2.35/ns-2.35/linkstate/ls.h
+```
+
+```CPP
+  void eraseAll() { erase(baseMap::begin(), baseMap::end()); }
+```
+
+```CPP
+  void eraseAll() { this->erase(baseMap::begin(), baseMap::end()); }
+```
+
 "Install",
 
 ```shell
