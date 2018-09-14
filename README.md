@@ -7,7 +7,7 @@
 
 [ns-allinone-2.35.tar.gz](http://sourceforge.net/projects/nsnam/files/allinone/ns-allinone-2.35/ns-allinone-2.35.tar.gz/download) SHA256: 2216f4e8e274f5c2437741fc6e9c9728369fabe1838c708ef974d262b941cd5d
 
-## Compile
+## Build
 
 Dependency,
 
