@@ -71,9 +71,10 @@ export CC=gcc-5 CXX=g++-5 && ./install
 Set ```PATH```,
 
 ```ini
-PATH=/the/path/to/ns-allinone-2.35/bin:/the/path/to/ns-allinone-2.35/tcl8.5.10/unix:/the/path/to/ns-allinone-2.35/tk8.5.10/unix:$PATH
-LD_LIBRARY_PATH=/the/path/to/ns-allinone-2.35/otcl-1.14:/the/path/to/ns-allinone-2.35/lib
-TCL_LIBRARY=/the/path/to/ns-allinone-2.35/tcl8.5.10/library
+NS_HOME=/the/path/to/ns-allinone-2.35
+PATH=$NS_HOME/bin:$NS_HOME/tcl8.5.10/unix:$NS_HOME/tk8.5.10/unix:$PATH
+LD_LIBRARY_PATH=$NS_HOME/otcl-1.14:$NS_HOME/lib
+TCL_LIBRARY=$NS_HOME/tcl8.5.10/library
 ```
 
 ### "Validate"
