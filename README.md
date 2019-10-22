@@ -47,15 +47,12 @@ linkstate/ls.h:137:25: note: use ‘this->erase’ instead
 ```
 
 ```shell
-vi /the/path/to/ns-allinone-2.35/ns-2.35/linkstate/ls.h
+vi +137 /the/path/to/ns-allinone-2.35/ns-2.35/linkstate/ls.h
 ```
 
-```CPP
-  void eraseAll() { erase(baseMap::begin(), baseMap::end()); }
-```
-
-```CPP
-  void eraseAll() { this->erase(baseMap::begin(), baseMap::end()); }
+``` diff
++  void eraseAll() { erase(baseMap::begin(), baseMap::end()); }
+-  void eraseAll() { this->erase(baseMap::begin(), baseMap::end()); }
 ```
 
 ### "Install"
