@@ -131,7 +131,7 @@ OBJ_CC = \
 sed -i '164a \\tmeasure\/mudp.o measure\/mudpsink.o measure\/mtcpsink.o \\' /the/path/to/ns-allinone-2.35/Makefile.in
 ```
 
-6. Add `Agent/mUDP set packetSize_ 1000` in the `ns-default.tcl`. (ns-default.tcl is under `/the/path/to/ns-allinone-2.35/ns-2.35/tcl/lib`, starting from the 185th line)
+6. Add `Agent/mUDP set packetSize_ 1000` in the `ns-default.tcl`. (ns-default.tcl is under `/the/path/to/ns-allinone-2.35/ns-2.35/tcl/lib`, starting from the 815th line)
 
 ```diff
   #
@@ -144,7 +144,7 @@ sed -i '164a \\tmeasure\/mudp.o measure\/mudpsink.o measure\/mtcpsink.o \\' /the
 ```
 
 ```shell
-sed -i '185a Agent/mUDP set packetSize_ 1000' /the/path/to/ns-allinone-2.35/ns-2.35/tcl/lib/ns-default.tcl
+sed -i '815a Agent/mUDP set packetSize_ 1000' /the/path/to/ns-allinone-2.35/ns-2.35/tcl/lib/ns-default.tcl
 ```
 
 ### "Install"
