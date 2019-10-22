@@ -47,7 +47,7 @@ linkstate/ls.h:137:25: note: use ‘this->erase’ instead
 ```
 
 ```shell
-vi +137 /the/path/to/ns-allinone-2.35/ns-2.35/linkstate/ls.h
+sed -i '137s/erase(/this->erase(/' /the/path/to/ns-allinone-2.35/ns-2.35/linkstate/ls.h
 ```
 
 ``` diff
