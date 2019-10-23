@@ -65,9 +65,9 @@ https://blog.csdn.net/Joanna_yan/article/details/41786757
 
 http://www.voidcn.com/article/p-rwcsrkzl-yx.html
 
-1. Create a folder named measure under ns. (`/the/path/to/ns-allinone-2.35/ns-2.35/measure`)
-2. Put these six files into measure folder.
-3. Add `sendtime_`, `pkt_id_` and `sendtime()` into packet common header. (starting from the 599th line in `/the/path/to/ns-allinone-2.35/ns-2.35/common/packet.h`)
+1. Create a folder named `measure` under ns. (`/the/path/to/ns-allinone-2.35/ns-2.35/measure`)
+2. Put these six files into `measure` folder.
+3. Add `sendtime_`, `pkt_id_` and `sendtime()` into packet common header (the struct `hdr_cmn`). (starting from the 599th line in `/the/path/to/ns-allinone-2.35/ns-2.35/common/packet.h`)
 
 ``` diff
 struct hdr_cmn {
@@ -102,7 +102,7 @@ sed -i '609a \\tunsigned long int pkt_id_;' /the/path/to/ns-allinone-2.35/ns-2.3
 sed -i '609a \\tdouble  sendtime_;' /the/path/to/ns-allinone-2.35/ns-2.35/common/packet.h
 ```
 
-4. Fix some bug of constructor in `mudp.cc` (starting from the 16th line).
+4. Fix some bug in the constructor of `mUdpAgent()` (starting from the 16th line of `mudp.cc`).
 
 ``` diff
 - mUdpAgent::mUdpAgent() : id_(0), openfile(0)
