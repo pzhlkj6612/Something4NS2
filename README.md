@@ -13,7 +13,7 @@
 
 ### Dependency
 
-```xorg-dev``` for X11 libraries, (libx11-dev is not enough)
+```xorg-dev``` for X11 libraries, (`libx11-dev` is not enough)
 
 ```shell
 sudo apt install -y xorg-dev
