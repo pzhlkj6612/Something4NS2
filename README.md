@@ -160,7 +160,7 @@ export CC=gcc-5 CXX=g++-5 && ./install
 
 ### Environment variables
 
-Set ```PATH```,
+Set ```PATH```, `LD_LIBRARY_PATH` and `TCL_LIBRARY`.
 
 ```ini
 NS2_HOME=/the/path/to/ns-allinone-2.35
