@@ -35,7 +35,7 @@ sudo apt install -y g++-5
 
 The error,
 
-```
+```console
 In file included from linkstate/ls.cc:67:0:
 linkstate/ls.h: In instantiation of ‘void LsMap<Key, T>::eraseAll() [with Key = int; T = LsIdSeq]’:
 linkstate/ls.cc:396:28:   required from here
