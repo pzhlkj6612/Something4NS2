@@ -46,13 +46,13 @@ linkstate/ls.h:137:25: note: declarations in dependent base ‘std::map<int, LsI
 linkstate/ls.h:137:25: note: use ‘this->erase’ instead
 ```
 
-```shell
-sed -i '137s/erase(/this->erase(/' /the/path/to/ns-allinone-2.35/ns-2.35/linkstate/ls.h
-```
-
 ``` diff
 -  void eraseAll() { erase(baseMap::begin(), baseMap::end()); }
 +  void eraseAll() { this->erase(baseMap::begin(), baseMap::end()); }
+```
+
+```shell
+sed -i '137s/erase(/this->erase(/' /the/path/to/ns-allinone-2.35/ns-2.35/linkstate/ls.h
 ```
 
 ### Add mUdp, mUdpSink and mTcpSink
