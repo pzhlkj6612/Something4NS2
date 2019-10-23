@@ -13,7 +13,7 @@
 
 ### Dependency
 
-```xorg-dev``` for ns2,
+```xorg-dev``` for X11 libraries,
 
 ```shell
 sudo apt install -y xorg-dev
