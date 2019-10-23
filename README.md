@@ -172,7 +172,7 @@ TCL_LIBRARY=$NS_HOME/tcl8.5.10/library
 ### "Validate"
 
 ```shell
-sudo apt install -y libperl4-corelib-perl
+sudo apt install -y libperl4-corelibs-perl
 cd /the/path/to/ns-allinone-2.35/ns-2.35/
 ./validate
 ```
