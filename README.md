@@ -81,8 +81,8 @@ struct hdr_cmn {
         double      ts_;           // timestamp: for q-delay measurement
         int     iface_;              // receiving interface (label)
         dir_t direction_;        // direction: 0=none, 1=up, -1=down
-+       double  sendtime_; // added by smallko
-+       unsigned long int pkt_id_; // added by smallko
++       double  sendtime_;
++       unsigned long int pkt_id_;
 
         //...
 
@@ -90,16 +90,16 @@ struct hdr_cmn {
         inline int& num_forwards() { return (num_forwards_); }
         inline int& opt_num_forwards() { return (opt_num_forwards_); }
         //monarch_end
-+       inline double& sendtime() { return (sendtime_); } // added by smallko
++       inline double& sendtime() { return (sendtime_); }
 
         //...
    }
 ```
 
 ```shell
-sed -i '667a \\tinline double& sendtime() { return (sendtime_); } // added by smallko' /the/path/to/ns-allinone-2.35/ns-2.35/common/packet.h
-sed -i '609a \\tunsigned long int pkt_id_; // added by smallko' /the/path/to/ns-allinone-2.35/ns-2.35/common/packet.h
-sed -i '609a \\tdouble  sendtime_; // added by smallko' /the/path/to/ns-allinone-2.35/ns-2.35/common/packet.h
+sed -i '667a \\tinline double& sendtime() { return (sendtime_); }' /the/path/to/ns-allinone-2.35/ns-2.35/common/packet.h
+sed -i '609a \\tunsigned long int pkt_id_;' /the/path/to/ns-allinone-2.35/ns-2.35/common/packet.h
+sed -i '609a \\tdouble  sendtime_;' /the/path/to/ns-allinone-2.35/ns-2.35/common/packet.h
 ```
 
 4. Fix some bug of constructor in `mudp.cc` (starting from the 16th line).
